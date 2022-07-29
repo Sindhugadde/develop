@@ -2,11 +2,11 @@
   <h5 class="card-header">Welcome to Login Page</h5>
   <div class="card-body">
 
-<form [formGroup]="requiredForm" (ngSubmit)="onSubmit()" >
+<form [formGroup]="requiredForm" (ngSubmit)="onSubmit(requiredForm.value)" >
  
   <div class="form-group">
     <label class="center-block">First Name:
-      <input class="form-control" formControlName="firstname">
+      <input class="form-control" ngModel placeholder ='Enter First Name' formControlName="firstname">
     </label>
   </div>
 
@@ -19,7 +19,7 @@
   
   <div class="form-group">
     <label class="center-block">Last Name:
-      <input class="form-control" formControlName="lastname">
+      <input placeholder ='Enter Last Name'  ngModel class="form-control" formControlName="lastname">
     </label>
   </div>
 
@@ -31,7 +31,7 @@
 
   <div class="form-group">
     <label class="center-block">Telephone:
-      <input class="form-control" formControlName="telephone">
+      <input class="form-control" ngModel placeholder ='Enter Telephone' formControlName="telephone">
     </label>
   </div>
 
@@ -43,7 +43,7 @@
 
   <div class="form-group">
     <label class="center-block">Email:
-      <input class="form-control" formControlName="email">
+      <input class="form-control" ngModel placeholder ='Enter Email' formControlName="email">
     </label>
   </div>
 
