@@ -1,4 +1,4 @@
-eexport class users{
+export class users{
    
     firstName: string;
     lastName: string;

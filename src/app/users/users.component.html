@@ -1,1 +1,13 @@
-<p>users are here!</p>
+<table style="width:100%">
+    <tr>
+    <th style="text-align:left" *ngFor="let header of headers">
+        {{header}}
+    </th>
+</tr>
+    <tr *ngFor="let item of UsersList">
+        <td *ngFor ="let column of headers">
+    {{item[column]}}
+    </td>
+       
+    </tr>
+</table>

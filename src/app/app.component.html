@@ -1,62 +1,19 @@
-<div class="card m-3">
-  <h5 class="card-header">Welcome to Login Page</h5>
-  <div class="card-body">
-
-<form [formGroup]="requiredForm" (ngSubmit)="onSubmit(requiredForm.value)" >
- 
-  <div class="form-group">
-    <label class="center-block">First Name:
-      <input class="form-control" ngModel placeholder ='Enter First Name' formControlName="firstname">
-    </label>
-  </div>
-
-  <div *ngIf="requiredForm.controls['firstname'].invalid && requiredForm.controls['firstname'].touched" class="alert alert-danger">
-      <div *ngIf="requiredForm.controls['firstname'].errors">
-     First Name is required.
-    </div>
-    
-  </div>
+<div class ="container">
+  <h3 class="d-flex justify-content-center">Application Login </h3>
+  <h5 class="d-flex justify-content-center">User Portal</h5>
+  <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button routerLink="webform"
+        class="m-1 btn btn-light btn-outline-primary" Button>User Login </button>
+      </li>
+      <br>
+      <li class="nav-item">
+        <button routerLink="users"
+        class="m-1 btn btn-light btn-outline-primary" Button>Get UserList </button>
+      </li>
+    </ul>
+  </nav>
+<router-outlet></router-outlet>
   
-  <div class="form-group">
-    <label class="center-block">Last Name:
-      <input placeholder ='Enter Last Name'  ngModel class="form-control" formControlName="lastname">
-    </label>
-  </div>
-
-  <div *ngIf="requiredForm.controls['lastname'].invalid && requiredForm.controls['lastname'].touched" class="alert alert-danger">
-      <div *ngIf="requiredForm.controls['lastname'].errors">
-     Last Name is required.
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label class="center-block">Telephone:
-      <input class="form-control" ngModel placeholder ='Enter Telephone' formControlName="telephone">
-    </label>
-  </div>
-
-  <div *ngIf="requiredForm.controls['telephone'].invalid && requiredForm.controls['telephone'].touched" class="alert alert-danger">
-      <div *ngIf="requiredForm.controls['telephone'].errors">
-     Telephone is required.
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label class="center-block">Email:
-      <input class="form-control" ngModel placeholder ='Enter Email' formControlName="email">
-    </label>
-  </div>
-
-  <div *ngIf="requiredForm.controls['email'].invalid && requiredForm.controls['email'].touched" class="alert alert-danger">
-      <div *ngIf="requiredForm.controls['email'].errors">
-     Email is required.
-    </div>
-  </div>
-  
-  <p>
-    <button (click)="goToPage('users')">Submit</button>
-  </p>
- 
-</form>
-</div>
 </div>

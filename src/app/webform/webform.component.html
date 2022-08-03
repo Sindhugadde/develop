@@ -1,0 +1,38 @@
+<div class="card m-3">
+    <h5 class="card-header">Welcome to Login Page</h5>
+    <div class="card-body">
+  
+  <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)" >
+   
+    <div class="form-group">
+      <label class="center-block">First Name:
+        <input class="form-control"  name="firstname" ngModel placeholder ='Enter First Name'>
+      </label>
+    </div> 
+    <div class="form-group">
+      <label class="center-block">Last Name:
+        <input placeholder ='Enter Last Name' name="lastname" ngModel class="form-control" >
+      </label>
+    </div>   
+    <div class="form-group">
+      <label class="center-block">Telephone:
+        <input class="form-control" name="telephone" ngModel  placeholder ='Enter Telephone' >
+      </label>
+    </div>
+  
+    
+  
+    <div class="form-group">
+      <label class="center-block">Email:
+        <input class="form-control" name="email" ngModel placeholder ='Enter Email' >
+      </label>
+    </div>
+  
+   
+   
+      <button type="submit">Submit</button>
+    
+   
+  </form>
+  </div>
+  </div>
